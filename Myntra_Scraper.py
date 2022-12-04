@@ -15,7 +15,6 @@ pg = 1
 while True:
     products = driver.find_elements(By.CLASS_NAME, 'product-base')
     for prod in products:
-        print(prod.find_element(By.CLASS_NAME, 'product-product').get_attribute('innerHTML'))
         if 'Sneakers' in prod.find_element(By.CLASS_NAME, 'product-product').get_attribute('innerHTML'):
             prods.append([prod.find_element(By.CLASS_NAME, 'product-brand').get_attribute('innerHTML'), prod.find_element(By.CLASS_NAME, 'product-product').get_attribute('innerHTML')])
     if pg == 4:
