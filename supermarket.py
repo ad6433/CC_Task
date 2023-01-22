@@ -15,7 +15,7 @@ class product:
         self.discount = discount
 
     def cost(self, amount):
-        return self.price * amount * (1 - 100 * self.discount)
+        return self.price * amount * (1 - self.discount / 100)
 
     def sold(self, amount):
         self.stock -= amount
